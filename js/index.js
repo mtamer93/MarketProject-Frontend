@@ -95,7 +95,7 @@ function createCategory() {
 
 function updateCategoryGet(){
   var queryString = decodeURIComponent(window.location.search);
-  // console.log(queryString.substring(4));
+  
   var categoryId = queryString.substring(4);
 
   fetch("https://localhost:7260/api/Categories/GetCategoryById?id=" + categoryId).then((response) => response.json()).then((data) => {
